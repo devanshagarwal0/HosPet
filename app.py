@@ -13,6 +13,9 @@ import pickle
 # Load environment variables from .env file
 load_dotenv()
 
+port = int(os.environ.get("PORT", 5000))
+app.run(host="0.0.0.0", port=port)
+
 # Initialize the Flask application
 app = Flask(__name__)
 CORS(app)
